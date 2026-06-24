@@ -1,17 +1,23 @@
 :root {
-  --font-size: 16px;
-  --background: #FFFDE8;
-  --foreground: #1A1033;
-  --primary: #FF3EA5;
-  --secondary: #B9F5A0;
-  --border: #1A1033;
+  --background: #fffde8;
+  --foreground: #1a1033;
+  --primary: #ff3ea5;
+  --secondary: #b9f5a0;
+  --border: #1a1033;
 
+  --font-size: 16px;
   --radius: 1rem;
+  --border-width: 2px;
+
+  padding: 0;
+  margin: 0;
 }
 
 body {
   background-color: var(--background);
   color: var(--foreground);
+  padding: 86px 0 0;
+  margin: 0;
 }
 
 p {
@@ -20,4 +26,12 @@ p {
 
 h1 {
   font-size: 1.5rem;
+}
+
+h2 {
+  font-size: 1.25rem;
+}
+
+h3 {
+  font-size: 1.125rem;
 }
