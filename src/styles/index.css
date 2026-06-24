@@ -1,0 +1,23 @@
+:root {
+  --font-size: 16px;
+  --background: #FFFDE8;
+  --foreground: #1A1033;
+  --primary: #FF3EA5;
+  --secondary: #B9F5A0;
+  --border: #1A1033;
+
+  --radius: 1rem;
+}
+
+body {
+  background-color: var(--background);
+  color: var(--foreground);
+}
+
+p {
+  font-size: var(--font-size);
+}
+
+h1 {
+  font-size: 1.5rem;
+}

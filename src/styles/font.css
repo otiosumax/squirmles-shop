@@ -1,0 +1,6 @@
+@import url('https://fonts.googleapis.com/css2?family=Comic+Relief:wght@400;700&display=swap');
+
+html {
+  font-family: 'Comic Relief', sans-serif;
+  font-size: var(--font-size);
+}
