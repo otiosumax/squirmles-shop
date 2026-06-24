@@ -3,7 +3,7 @@
   top: 0;
   left: 0;
   width: 100%;
-  padding: 8px 32px;
+  padding: 16px 32px;
   border-bottom: var(--border-width) solid var(--border);
   background-color: var(--background);
 
@@ -36,7 +36,11 @@
     border-radius: 1000pt;
 
     cursor: pointer;
-    user-select: none;
+  }
+
+  .menu p {
+    margin: 0;
+    cursor: pointer;
   }
 }
 

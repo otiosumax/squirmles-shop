@@ -11,27 +11,36 @@
 
   padding: 0;
   margin: 0;
+
+  ::selection {
+    background-color: var(--primary); /* Цвет фона выделения */
+    color: var(--background); /* Цвет текста при выделении */
+  }
 }
 
 body {
   background-color: var(--background);
   color: var(--foreground);
-  padding: 86px 0 0;
+  padding: 72px 0 0;
   margin: 0;
 }
 
 p {
   font-size: var(--font-size);
+  margin: 0;
 }
 
 h1 {
   font-size: 1.5rem;
+  margin: 0;
 }
 
 h2 {
   font-size: 1.25rem;
+  margin: 0;
 }
 
 h3 {
+  margin: 0;
   font-size: 1.125rem;
 }
