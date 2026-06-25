@@ -1,5 +1,6 @@
 .header {
   position: fixed;
+  z-index: 1000;
   top: 0;
   left: 0;
   width: 100%;
@@ -29,19 +30,19 @@
     }
   }
 
-  .cart {
+  /* .cart {
     background-color: var(--primary);
     color: var(--background);
     padding: 6px 12px;
     border-radius: var(--radius);
 
     cursor: pointer;
-  }
+  } */
 
-  .menu p {
+  /* .menu p {
     margin: 0;
     cursor: pointer;
-  }
+  } */
 }
 
 body {

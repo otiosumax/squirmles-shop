@@ -2,12 +2,11 @@
   width: 100%;
   height: 100%;
 
-  padding: 12px;
-
   box-sizing: border-box;
 
   border: var(--border-width) solid var(--border);
   border-radius: var(--radius);
+  overflow: hidden;
 
   box-shadow: calc(2 * var(--border-width)) calc(2 * var(--border-width))
     var(--border);
@@ -16,5 +15,48 @@
 }
 
 .item-card:hover {
-  transform: translate(0, -2px);
+  transform: translate(0, -4px);
+}
+
+.item-image {
+  width: 100%;
+  aspect-ratio: 1/1;
+  object-fit: cover;
+  position: relative;
+
+  .item-badge {
+    position: absolute;
+    top: 8px;
+    left: 8px;
+
+    padding: 4px 8px;
+    border-radius: var(--radius);
+
+    color: var(--background);
+  }
+
+  img {
+    aspect-ratio: 1/1;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+}
+
+.item-info {
+  bottom: 0;
+  padding: 16px;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  height: 100%;
+
+  background-color: var(--card);
+  color: var(--card-foreground);
+
+  .star {
+    color: gold;
+    font-size: 1.2rem;
+    margin-right: 4px;
+  }
 }

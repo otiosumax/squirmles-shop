@@ -9,6 +9,7 @@
     "badge": "Bestseller",
     "badgeColor": "#FF3EA5",
     "Worm": "WormPink",
+    "imageUrl": "https://picsum.photos/201",
     "stars": 4.9,
     "reviews": 2341
   },
@@ -22,6 +23,7 @@
     "badge": "Fan Fave",
     "badgeColor": "#4DB8FF",
     "Worm": "WormRainbow",
+    "imageUrl": "https://picsum.photos/202",
     "stars": 4.8,
     "reviews": 1887
   },
@@ -35,7 +37,8 @@
     "badge": "New",
     "badgeColor": "#7FDB67",
     "Worm": "WormGlow",
-    "stars": 4.7,
+    "imageUrl": "https://picsum.photos/203",
+    "stars": 3.7,
     "reviews": 654
   },
   {
@@ -48,6 +51,7 @@
     "badge": "Best Value",
     "badgeColor": "#A78BFA",
     "Worm": "WormMini",
+    "imageUrl": "https://picsum.photos/204",
     "stars": 4.9,
     "reviews": 3102
   },
@@ -61,6 +65,7 @@
     "badge": "Giant",
     "badgeColor": "#FF8C42",
     "Worm": "WormGiant",
+    "imageUrl": "https://picsum.photos/205",
     "stars": 4.6,
     "reviews": 812
   },
@@ -74,6 +79,7 @@
     "badge": "Limited",
     "badgeColor": "#9B87F5",
     "Worm": "WormMetallic",
+    "imageUrl": "https://picsum.photos/206",
     "stars": 4.8,
     "reviews": 1203
   }

@@ -10,14 +10,14 @@ export default function Hero() {
         <br />
         черви!
       </h1>
-      <div>Здесь будет картинка</div>
+      <div>картинку бы сюда</div>
       <div>
         <h2>
           Пушистые, цветастые и веселые. Все о них мечтают, но не все
           признаются.
         </h2>
         <div className="shop-and-shipping">
-          <p className="shop-button">Закупиться</p>
+          <button className="shop-button">Закупиться</button>
           <p>Бесплатная доставка при заказе от 1000$!</p>
         </div>
       </div>

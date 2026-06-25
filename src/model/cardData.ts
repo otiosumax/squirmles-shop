@@ -8,6 +8,7 @@ export interface CardData {
   badge: string;
   badgeColor: string;
   Worm: string;
+  imageUrl: string;
   stars: number;
   reviews: number;
 }

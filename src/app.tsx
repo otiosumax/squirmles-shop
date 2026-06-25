@@ -11,11 +11,11 @@ export default function App() {
           <h1>Здесь будут черви</h1>
         </div>
         <div className="menu">
-          <p>Магазин</p>
-          <p>О нас</p>
-          <p>ЧаВо</p>
+          <button>Магазин</button>
+          <button>О нас</button>
+          <button>ЧаВо</button>
         </div>
-        <h2 className="cart">Корзина</h2>
+        <button className="cart">Корзина</button>
       </div>
       <Hero />
       <Collection />
