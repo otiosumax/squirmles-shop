@@ -1,5 +1,6 @@
 import "./styles/app.css";
 import Hero from "./components/hero";
+import Collection from "./components/collection";
 
 export default function App() {
   return (
@@ -17,6 +18,7 @@ export default function App() {
         <h2 className="cart">Корзина</h2>
       </div>
       <Hero />
+      <Collection />
     </>
   );
 }

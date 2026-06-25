@@ -1,6 +1,8 @@
 :root {
   --background: #fffde8;
   --foreground: #1a1033;
+  --muted: ececf0;
+  --muted-foreground: #717182;
   --primary: #ff3ea5;
   --secondary: #b9f5a0;
   --border: #1a1033;
@@ -27,6 +29,7 @@ body {
 
 p {
   font-size: var(--font-size);
+  color: var(--muted-foreground);
   margin: 0;
 }
 

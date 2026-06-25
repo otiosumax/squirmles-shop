@@ -4,3 +4,7 @@ html {
   font-family: 'LXGW Marker Gothic', sans-serif;
   font-size: var(--font-size);
 }
+
+p {
+  font-family: sans-serif;
+}

@@ -1,0 +1,80 @@
+[
+  {
+    "id": 1,
+    "name": "Classic Pink Worm",
+    "tagline": "The OG wiggly companion",
+    "price": 4.99,
+    "color": "#FF3EA5",
+    "bg": "#FFF0F8",
+    "badge": "Bestseller",
+    "badgeColor": "#FF3EA5",
+    "Worm": "WormPink",
+    "stars": 4.9,
+    "reviews": 2341
+  },
+  {
+    "id": 2,
+    "name": "Rainbow Worm",
+    "tagline": "Every color of the wiggle",
+    "price": 6.99,
+    "color": "#4DB8FF",
+    "bg": "#F0F8FF",
+    "badge": "Fan Fave",
+    "badgeColor": "#4DB8FF",
+    "Worm": "WormRainbow",
+    "stars": 4.8,
+    "reviews": 1887
+  },
+  {
+    "id": 3,
+    "name": "Glow-in-the-Dark",
+    "tagline": "Wiggles after dark",
+    "price": 7.99,
+    "color": "#7FDB67",
+    "bg": "#F2FFF0",
+    "badge": "New",
+    "badgeColor": "#7FDB67",
+    "Worm": "WormGlow",
+    "stars": 4.7,
+    "reviews": 654
+  },
+  {
+    "id": 4,
+    "name": "Mini Worm 5-Pack",
+    "tagline": "Five times the mayhem",
+    "price": 12.99,
+    "color": "#A78BFA",
+    "bg": "#F5F0FF",
+    "badge": "Best Value",
+    "badgeColor": "#A78BFA",
+    "Worm": "WormMini",
+    "stars": 4.9,
+    "reviews": 3102
+  },
+  {
+    "id": 5,
+    "name": "Giant Deluxe Worm",
+    "tagline": "Thicc & extra wiggly",
+    "price": 9.99,
+    "color": "#FF8C42",
+    "bg": "#FFF5EE",
+    "badge": "Giant",
+    "badgeColor": "#FF8C42",
+    "Worm": "WormGiant",
+    "stars": 4.6,
+    "reviews": 812
+  },
+  {
+    "id": 6,
+    "name": "Metallic Worm",
+    "tagline": "Shimmery disco vibes",
+    "price": 5.99,
+    "color": "#9B87F5",
+    "bg": "#F8F5FF",
+    "badge": "Limited",
+    "badgeColor": "#9B87F5",
+    "Worm": "WormMetallic",
+    "stars": 4.8,
+    "reviews": 1203
+  }
+]
