@@ -11,6 +11,8 @@ type CartContextType = {
   removeFromCart: (id: string) => void;
 };
 
+// TODO: изучить подробнее
+
 const CartContext = createContext<CartContextType | undefined>(undefined);
 
 export function CartProvider({ children }: { children: React.ReactNode }) {
@@ -55,7 +57,7 @@ export function useCart() {
   const context = useContext(CartContext);
   if (!context) {
     throw new Error(
-      "Привет, я Ошибка! Я не скажу какая и где: дебаж все вслепую.",
+      "Привет, я Ошибка! Я не скажу какая и где: дебажь все вслепую.",
     );
   }
   return context;

@@ -2,6 +2,7 @@
   display: grid;
   grid-template-columns: 1fr 1fr;
   grid-template-rows: auto auto;
+
   table-layout: fixed;
   gap: 16px 86px;
   margin: 128px 0;
@@ -11,6 +12,17 @@
   h1 {
     font-size: clamp(48px, 7.5vw, 100px);
   }
+
+  img {
+    aspect-ratio: 1/1;
+    width: 80%;
+    object-fit: cover;
+    border: var(--border-width) solid var(--border);
+    border-radius: var(--radius);
+    box-shadow: calc(2 * var(--border-width)) calc(2 * var(--border-width))
+      var(--border);
+  }
+
   .shop-and-shipping {
     margin-top: 32px;
     display: flex;
@@ -18,7 +30,6 @@
     justify-content: space-between;
     gap: 16px;
   }
-
 
   button {
     font-size: 1.5rem;

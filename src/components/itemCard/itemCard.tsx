@@ -1,13 +1,15 @@
 import "./itemCard.css";
 import type { CardData } from "../../models/cardData";
 import { useCart } from "../../contents/cartContext";
-import { useEffect } from "react";
 
 export default function ItemCard({ item }: { item: CardData }) {
   const imageUrl: string = item?.imageUrl || "images/placeholder.jpg";
   const itemId: string = item?.id || "unknown";
 
   const cart = useCart();
+
+  const inCartItemQuantity =
+    cart.inCart.find((cartItem) => cartItem.id === itemId)?.quantity || 0;
 
   if (
     !(item && item.name && imageUrl && item.price && item.stars && item.reviews)
@@ -67,15 +69,46 @@ export default function ItemCard({ item }: { item: CardData }) {
           <h2 className="item-price" style={{ color: item.color }}>
             ${item.price * 1000}
           </h2>
-          <button
-            className="add-to-cart"
-            style={{ backgroundColor: item.color }}
-            onClick={() => {
-              cart.addToCart({ id: itemId, quantity: 1 });
-            }}
-          >
-            В корзину
-          </button>
+          {inCartItemQuantity === 0 && (
+            <button
+              className="add-to-cart"
+              style={{ borderColor: item.color }}
+              onClick={() => {
+                cart.addToCart({ id: itemId, quantity: 1 });
+              }}
+            >
+              В корзину
+            </button>
+          )}
+          {inCartItemQuantity != 0 && (
+            <div className="in-cart-quantity">
+              <button
+                style={{
+                  borderColor: item.color,
+                  borderRadius: "1000px 0 0 1000px",
+                }}
+                onClick={() => {
+                  cart.removeFromCart(itemId);
+                }}
+              >
+                -
+              </button>
+              <span style={{ borderColor: item.color }}>
+                {inCartItemQuantity}
+              </span>
+              <button
+                style={{
+                  borderColor: item.color,
+                  borderRadius: "0 1000px 1000px 0",
+                }}
+                onClick={() => {
+                  cart.addToCart({ id: itemId, quantity: 1 });
+                }}
+              >
+                +
+              </button>
+            </div>
+          )}
         </div>
       </div>
     </div>

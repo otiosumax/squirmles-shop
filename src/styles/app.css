@@ -34,13 +34,19 @@
     font-size: var(--font-size);
     border-radius: 1000px;
   }
+
+  @media (max-width: 726px) {
+    .menu {
+      display: none;
+    }
+  }
 }
 
 body {
   margin: 0 clamp(32px, 16vw, 256px);
   padding: 0;
 }
-@media (max-width: 1024px) {
+@media (max-width: 726px) {
   body {
     margin: 0 32px;
   }

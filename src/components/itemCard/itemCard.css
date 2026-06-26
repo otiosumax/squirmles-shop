@@ -60,10 +60,43 @@
     margin-right: 4px;
   }
 
-    .item-price-container {
+  .item-price-container {
     display: flex;
     align-items: center;
     justify-content: space-between;
     gap: 16px;
+  }
+  button.add-to-cart {
+    width: 100%;
+    padding: 4px 8px;
+    border: var(--border-width) solid var(--border);
+    background-color: var(--card);
+    color: var(--card-foreground);
+    font-weight: bold;
+  }
+
+  .in-cart-quantity {
+    display: flex;
+    align-items: stretch; /* Растянет все элементы (и кнопки, и span) на одинаковую высоту */
+
+    span {
+      display: inline-block;
+      align-items: center; /* Отцентрует цифру внутри span по вертикали */
+      justify-content: center;
+      padding: 0 8px;
+      box-sizing: border-box; /* Чтобы границы входили в размер элемента */
+      border: var(--border-width) solid var(--border);
+      border-style: solid none;
+      height: full;
+    }
+
+    button {
+      background-color: var(--card);
+      border: var(--border-width) solid var(--border);
+      color: var(--card-foreground);
+      padding: 4px 8px;
+      margin: 0;
+      height: 100%;
+    }
   }
 }
