@@ -16,7 +16,9 @@ type CartContextType = {
 const CartContext = createContext<CartContextType | undefined>(undefined);
 
 export function CartProvider({ children }: { children: React.ReactNode }) {
-  const [inCart, setInCart] = useState<CartItem[]>([]);
+  const [inCart, setInCart] = useState<CartItem[]>(
+    JSON.parse(localStorage.getItem("cart") || ""),
+  );
 
   const addToCart = (item: { id: string }) => {
     setInCart((prev) => {
@@ -44,8 +46,8 @@ export function CartProvider({ children }: { children: React.ReactNode }) {
     );
   };
   useEffect(() => {
-    console.log("Cart updated:", inCart);
-  });
+    localStorage.setItem("cart", JSON.stringify(inCart));
+  }, [inCart]);
   return (
     <CartContext.Provider value={{ inCart, addToCart, removeFromCart }}>
       {children}
