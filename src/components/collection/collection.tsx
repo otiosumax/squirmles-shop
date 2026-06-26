@@ -1,8 +1,8 @@
 import { useEffect, useState } from "react";
-import ItemCard from "./itemCard";
-import type { CardData } from "../model/cardData";
+import ItemCard from "../itemCard/itemCard";
+import type { CardData } from "../../models/cardData";
 
-import '../styles/collection.css'
+import './collection.css'
 
 export default function Collection() {
   const [items, setItems] = useState<CardData[]>([]);

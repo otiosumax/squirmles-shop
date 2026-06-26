@@ -1,8 +1,13 @@
-import "../styles/itemCard.css";
-import type { CardData } from "../model/cardData";
+import "./itemCard.css";
+import type { CardData } from "../../models/cardData";
+import { useCart } from "../../contents/cartContext";
+import { useEffect } from "react";
 
 export default function ItemCard({ item }: { item: CardData }) {
   const imageUrl: string = item?.imageUrl || "images/placeholder.jpg";
+  const itemId: string = item?.id || "unknown";
+
+  const cart = useCart();
 
   if (
     !(item && item.name && imageUrl && item.price && item.stars && item.reviews)
@@ -58,11 +63,19 @@ export default function ItemCard({ item }: { item: CardData }) {
           <span className="item-reviews">({item.reviews})</span>
         </span>
         <br />
-        <div>
+        <div className="item-price-container">
           <h2 className="item-price" style={{ color: item.color }}>
             ${item.price * 1000}
           </h2>
-          <button className="add-to-cart">В корзину</button>
+          <button
+            className="add-to-cart"
+            style={{ backgroundColor: item.color }}
+            onClick={() => {
+              cart.addToCart({ id: itemId, quantity: 1 });
+            }}
+          >
+            В корзину
+          </button>
         </div>
       </div>
     </div>

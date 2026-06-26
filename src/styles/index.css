@@ -12,6 +12,7 @@
   --font-size: 16px;
   --radius: 1rem;
   --border-width: 2px;
+  --button-radius: 1000px;
 
   padding: 0;
   margin: 0;
@@ -51,13 +52,20 @@ h3 {
 }
 
 button {
+  appearance: none;
+  font: inherit;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
   cursor: pointer;
   border: none;
   background-color: var(--primary);
   color: var(--background);
   padding: 8px 16px;
-  border-radius: var(--radius);
+  border-radius: var(--button-radius);
   font-size: var(--font-size);
+  line-height: 1;
   transition: 200ms;
 
   &:hover {

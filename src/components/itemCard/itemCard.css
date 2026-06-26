@@ -59,4 +59,11 @@
     font-size: 1.2rem;
     margin-right: 4px;
   }
+
+    .item-price-container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 16px;
+  }
 }
