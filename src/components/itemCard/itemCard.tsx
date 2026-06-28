@@ -1,8 +1,8 @@
 import "./itemCard.css";
-import type { CardData } from "../../models/cardData";
+import type { Product } from "../../models/cardData";
 import { useCart } from "../../contents/cartContext";
 
-export default function ItemCard({ item }: { item: CardData }) {
+export default function ItemCard({ item }: { item: Product }) {
   const imageUrl: string = item?.imageUrl || "images/placeholder.jpg";
   const itemId: string = item?.id || "unknown";
 
@@ -15,7 +15,7 @@ export default function ItemCard({ item }: { item: CardData }) {
     !(item && item.name && imageUrl && item.price && item.stars && item.reviews)
   ) {
     return (
-      <div className="item-card">
+      <div className="bordered item-card">
         <div
           className="item-image"
           style={{ backgroundColor: item?.bg || "#ccc" }}
@@ -35,13 +35,13 @@ export default function ItemCard({ item }: { item: CardData }) {
           <p className="item-description">
             {item?.tagline || "No description available."}
           </p>
-          <p className="item-price">${(item?.price || 0) * 1000}</p>
+          <p className="item-price">${item?.price || 0}</p>
         </div>
       </div>
     );
   }
   return (
-    <div className="item-card">
+    <div className="item-card bordered">
       <div className="item-image" style={{ backgroundColor: item.bg }}>
         <div
           className="item-badge"
@@ -67,7 +67,7 @@ export default function ItemCard({ item }: { item: CardData }) {
         <br />
         <div className="item-price-container">
           <h2 className="item-price" style={{ color: item.color }}>
-            ${item.price * 1000}
+            ${item.price}
           </h2>
           {inCartItemQuantity === 0 && (
             <button

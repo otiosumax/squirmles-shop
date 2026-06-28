@@ -77,3 +77,11 @@ button {
     color: var(--foreground);
   }
 }
+
+.bordered {
+  border: var(--border-width) solid var(--border);
+  border-radius: var(--radius);
+  box-shadow: calc(2 * var(--border-width)) calc(2 * var(--border-width))
+    var(--border);
+  object-fit: cover;
+}

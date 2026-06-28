@@ -18,10 +18,6 @@
     aspect-ratio: 1/1;
     width: 80%;
     object-fit: cover;
-    border: var(--border-width) solid var(--border);
-    border-radius: var(--radius);
-    box-shadow: calc(2 * var(--border-width)) calc(2 * var(--border-width))
-      var(--border);
   }
 
   .shop-and-shipping {

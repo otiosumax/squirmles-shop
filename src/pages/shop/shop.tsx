@@ -40,7 +40,7 @@ export default function App() {
             <h1>Здесь будут черви</h1>
           </div>
           <div className="menu">
-            <p onClick={() => scrollToSection("about")}>О нас</p>
+            <p onClick={() => scrollToSection("hero")}>Вверх</p>
             <p onClick={() => scrollToSection("shop")}>Магазин</p>
             {/* <p onClick={() => scrollToSection("qna")}>ЧаВо</p> */}
           </div>
@@ -54,7 +54,7 @@ export default function App() {
           </button>
         </div>
 
-        <Hero ref={getRef("about")} />
+        <Hero ref={getRef("hero")} onButtonClick={() => scrollToSection("shop")}/>
         <Collection ref={getRef("shop")} />
 
         <Cart isOpen={isCartOpen} onClose={() => setIsCartOpen(false)} />

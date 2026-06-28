@@ -21,7 +21,6 @@
   height: 100%;
   background-color: var(--foreground);
 
-  /* Плавное появление фона */
   opacity: 0;
   transition: opacity 300ms ease;
 }
@@ -32,9 +31,13 @@
 .cart-panel {
   position: absolute;
   padding: 8px 16px;
+
+  display: flex;
+  flex-direction: column;
+
   background-color: var(--background);
   right: 0;
-  width: 30vw;
+  width: auto;
   height: 100vh;
 
   transform: translateX(100%);
@@ -50,4 +53,33 @@
   height: var(--border-width);
   background-color: var(--border);
   margin: 8px 0 16px;
+}
+
+.items-in-cart-list {
+  flex-grow: 1;
+  overflow-y: auto;
+
+  scrollbar-width: none;
+
+  .item-in-cart-card {
+    margin: 8px 16px 16px 16px ;
+    padding: 0 16px 0 0;
+
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 16px;
+
+    background-color: var(--card);
+
+    img {
+      aspect-ratio: 1/1;
+      height: 72px;
+    }
+  }
+}
+
+.payout {
+  position: fixed;
+  bottom: 32px;
 }

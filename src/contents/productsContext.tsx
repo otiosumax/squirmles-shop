@@ -21,7 +21,7 @@ export function ProductsProvider({ children }: { children: React.ReactNode }) {
           "Привет, я Ошибка! Я не скажу какая и где: дебажь все вслепую.",
         ),
       );
-  });
+  }, []);
 
   return (
     <ProductsContext.Provider value={{ productsList }}>
