@@ -1,7 +1,7 @@
 import "./styles/app.css";
 import Shop from "./pages/shop/shop";
-import { CartProvider } from "./contents/cartContext";
-import { ProductsProvider } from "./contents/productsContext";
+import { CartProvider } from "./contexts/cartContext";
+import { ProductsProvider } from "./contexts/productsContext";
 
 export default function App() {
   return (

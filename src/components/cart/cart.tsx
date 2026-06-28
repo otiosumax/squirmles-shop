@@ -1,8 +1,8 @@
 import "./cart.css";
 
 import { useEffect, useState } from "react";
-import { useCart } from "../../contents/cartContext";
-import { useProducts } from "../../contents/productsContext";
+import { useCart } from "../../contexts/cartContext";
+import { useProducts } from "../../contexts/productsContext";
 import type { Product } from "../../models/cardData";
 
 type cartProps = { isOpen: boolean; onClose: () => void };
@@ -75,7 +75,7 @@ export default function Cart({ isOpen, onClose }: cartProps) {
           item.quantity
       );
     }, 0)
-    .toPrecision(2);
+    .toFixed(2);
 
   return (
     <div className={`cart-container ${isOpen ? "open" : ""}`}>
@@ -92,8 +92,9 @@ export default function Cart({ isOpen, onClose }: cartProps) {
           })}
         </div>
         <div className="payout">
-          <p>${total}</p>
-          
+          <div className="divider" />
+          <p>Сумма заказа:</p>
+          <h1>${total}</h1>
         </div>
       </div>
     </div>

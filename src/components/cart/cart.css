@@ -62,7 +62,7 @@
   scrollbar-width: none;
 
   .item-in-cart-card {
-    margin: 8px 16px 16px 16px ;
+    margin: 8px 16px 16px 16px;
     padding: 0 16px 0 0;
 
     display: flex;
@@ -75,11 +75,11 @@
     img {
       aspect-ratio: 1/1;
       height: 72px;
+      border-radius: var(--radius) 0 0 var(--radius);
     }
   }
 }
 
 .payout {
-  position: fixed;
-  bottom: 32px;
+  margin: 16px 0 32px;
 }

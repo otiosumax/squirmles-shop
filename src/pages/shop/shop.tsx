@@ -2,7 +2,7 @@ import "../../styles/app.css";
 import "./shop.css";
 import Hero from "../../components/hero/hero";
 import Collection from "../../components/collection/collection";
-import { CartProvider } from "../../contents/cartContext";
+import { CartProvider } from "../../contexts/cartContext";
 import { useRef, useState } from "react";
 import Cart from "../../components/cart/cart";
 

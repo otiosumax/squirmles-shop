@@ -2,7 +2,7 @@ import { forwardRef } from "react";
 import ItemCard from "../itemCard/itemCard";
 
 import "./collection.css";
-import { useProducts } from "../../contents/productsContext";
+import { useProducts } from "../../contexts/productsContext";
 
 const Collection = forwardRef<HTMLDivElement>(function Hero(props, ref) {
   const products = useProducts();

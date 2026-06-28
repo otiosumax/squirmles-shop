@@ -1,6 +1,6 @@
 import "./itemCard.css";
 import type { Product } from "../../models/cardData";
-import { useCart } from "../../contents/cartContext";
+import { useCart } from "../../contexts/cartContext";
 
 export default function ItemCard({ item }: { item: Product }) {
   const imageUrl: string = item?.imageUrl || "images/placeholder.jpg";
