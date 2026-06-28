@@ -91,10 +91,15 @@ export default function Cart({ isOpen, onClose }: cartProps) {
             return <CartItemCard key={item.id} item={product} />;
           })}
         </div>
-        <div className="payout">
+        <div className="payment">
           <div className="divider" />
-          <p>Сумма заказа:</p>
-          <h1>${total}</h1>
+          <div className="payment-flex">
+            <div>
+              <p>Сумма заказа:</p>
+              <h1>${total}</h1>
+            </div>
+            <button>Оплатить</button>
+          </div>
         </div>
       </div>
     </div>

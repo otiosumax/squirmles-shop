@@ -80,6 +80,15 @@
   }
 }
 
-.payout {
+.payment {
   margin: 16px 0 32px;
+
+  .payment-flex {
+    display: flex;
+    justify-content: space-between;
+  }
+
+  button {
+    width: 50%;
+  }
 }

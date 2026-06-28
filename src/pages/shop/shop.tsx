@@ -6,7 +6,7 @@ import { CartProvider } from "../../contexts/cartContext";
 import { useRef, useState } from "react";
 import Cart from "../../components/cart/cart";
 
-export default function App() {
+export default function Shop() {
   const [isCartOpen, setIsCartOpen] = useState(false);
 
   const scrollTargets = useRef<Map<string, HTMLDivElement | null>>(new Map());
