@@ -1,0 +1,10 @@
+.progress-stripe {
+  margin: 62px calc(-1 * var(--indent));
+  padding: 8px var(--indent);
+  position: static;
+  background-color: color-mix(in srgb, var(--foreground) 15%, transparent);
+}
+
+form {
+  background-color: var(--card);
+}

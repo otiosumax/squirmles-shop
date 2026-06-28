@@ -4,18 +4,29 @@
   top: 0;
   left: 0;
   width: 100%;
-  padding: 16px 32px;
+  padding: 16px var(--indent);
   border-bottom: var(--border-width) solid var(--border);
   background-color: var(--background);
 
   box-sizing: border-box;
 
-  display: flex;
-  justify-content: space-between;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
   align-items: center;
+
+  .align-left {
+    justify-self: start;
+  }
+  .align-center {
+    justify-self: center;
+  }
+  .align-right {
+    justify-self: end;
+  }
 
   .menu {
     display: flex;
+    justify-items: center;
     gap: 32px;
   }
 
@@ -30,27 +41,10 @@
     }
   }
 
-  button {
-    font-size: var(--font-size);
-    border-radius: 1000px;
-  }
-
   @media (max-width: 726px) {
     .menu {
       display: none;
     }
   }
-
-  .menu {
-  }
 }
 
-body {
-  margin: 0 clamp(32px, 16vw, 256px);
-  padding: 0;
-}
-@media (max-width: 726px) {
-  body {
-    margin: 0 32px;
-  }
-}

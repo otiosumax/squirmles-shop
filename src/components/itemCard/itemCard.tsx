@@ -1,4 +1,5 @@
 import "./itemCard.css";
+
 import type { Product } from "../../models/cardData";
 import { useCart } from "../../contexts/cartContext";
 
@@ -71,7 +72,7 @@ export default function ItemCard({ item }: { item: Product }) {
           </h2>
           {inCartItemQuantity === 0 && (
             <button
-              className="add-to-cart"
+              className="add-to-cart button"
               style={{ borderColor: item.color }}
               onClick={() => {
                 cart.addToCart({ id: itemId, quantity: 1 });

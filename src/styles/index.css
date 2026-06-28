@@ -13,6 +13,7 @@
   --radius: 1rem;
   --border-width: 2px;
   --button-radius: 1000px;
+  --indent: clamp(32px, 8vw, 256px);
 
   padding: 0;
   margin: 0;
@@ -30,8 +31,15 @@ html {
 body {
   background-color: var(--background);
   color: var(--foreground);
-  padding: 72px 0 0;
-  margin: 0;
+  /* padding: 72px 0 0; */
+  margin: 0 var(--indent);
+  padding: 0;
+}
+
+@media (max-width: 726px) {
+  body {
+    margin: 0 32px;
+  }
 }
 
 p {
@@ -55,7 +63,12 @@ h3 {
   font-size: 1.125rem;
 }
 
-button {
+a {
+  text-decoration: none;
+  color: var(--foreground);
+}
+
+.button {
   appearance: none;
   font: inherit;
   display: inline-flex;
@@ -67,9 +80,11 @@ button {
   background-color: var(--primary);
   color: var(--background);
   padding: 8px 16px;
+  width: fit-content;
   border-radius: var(--button-radius);
   font-size: var(--font-size);
   line-height: 1;
+  text-decoration: none;
   transition: 200ms;
 
   &:hover {

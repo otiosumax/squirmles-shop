@@ -1,9 +1,11 @@
 import "./cart.css";
 
 import { useEffect, useState } from "react";
+
+import { Link } from "react-router";
+import type { Product } from "../../models/cardData";
 import { useCart } from "../../contexts/cartContext";
 import { useProducts } from "../../contexts/productsContext";
-import type { Product } from "../../models/cardData";
 
 type cartProps = { isOpen: boolean; onClose: () => void };
 
@@ -98,7 +100,9 @@ export default function Cart({ isOpen, onClose }: cartProps) {
               <p>Сумма заказа:</p>
               <h1>${total}</h1>
             </div>
-            <button>Оплатить</button>
+            <Link className="button" to="/checkout">
+              Оплатить
+            </Link>
           </div>
         </div>
       </div>
