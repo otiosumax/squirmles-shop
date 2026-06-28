@@ -1,29 +1,24 @@
-import { useEffect, useState } from "react";
+import { forwardRef } from "react";
 import ItemCard from "../itemCard/itemCard";
-import type { CardData } from "../../models/cardData";
 
-import './collection.css'
+import "./collection.css";
+import { useProducts } from "../../contents/productsContext";
 
-export default function Collection() {
-  const [items, setItems] = useState<CardData[]>([]);
-
-  useEffect(() => {
-    fetch("/sample.json")
-      .then((response) => response.json())
-      .then((data) => setItems(data))
-      .catch((error) => console.error("Ошибка:", error));
-  }, []);
+const Collection = forwardRef<HTMLDivElement>(function Hero(props, ref) {
+  const products = useProducts();
 
   return (
-    <div className="collection">
+    <div ref={ref} className="collection">
       <h1>Коллекция</h1>
       <p>Свой червь под каждый вайб!</p>
       <br />
       <div className="selling-items">
-      {items.map((item) => (
-        <ItemCard key={item.id} item={item} />
-      ))}
+        {products.productsList.map((item) => (
+          <ItemCard key={item.id} item={item} />
+        ))}
       </div>
     </div>
   );
-}
+});
+
+export default Collection;

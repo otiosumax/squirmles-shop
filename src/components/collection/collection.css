@@ -1,3 +1,7 @@
+.collection {
+  scroll-margin-top: 80px;
+}
+
 .selling-items {
   display: grid;
   grid-template-columns: 1fr 1fr 1fr;

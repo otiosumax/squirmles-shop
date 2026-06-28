@@ -57,10 +57,9 @@ export function CartProvider({ children }: { children: React.ReactNode }) {
 
 export function useCart() {
   const context = useContext(CartContext);
-  if (!context) {
+  if (!context)
     throw new Error(
       "Привет, я Ошибка! Я не скажу какая и где: дебажь все вслепую.",
     );
-  }
   return context;
 }

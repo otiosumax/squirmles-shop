@@ -1,8 +1,9 @@
+import { forwardRef } from "react";
 import "./hero.css";
 
-export default function Hero() {
+const Hero = forwardRef<HTMLDivElement>(function Hero(props, ref) {
   return (
-    <div className="hero">
+    <div ref={ref} className="hero">
       <h1>
         Самые
         <br />
@@ -28,4 +29,6 @@ export default function Hero() {
       </div>
     </div>
   );
-}
+});
+
+export default Hero;

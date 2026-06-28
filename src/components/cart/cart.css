@@ -1,0 +1,53 @@
+.cart-container {
+  position: fixed;
+  top: 0;
+  right: 0;
+  height: 100vh;
+  width: 100vw;
+  z-index: 10;
+
+  pointer-events: none;
+}
+
+.cart-container.open {
+  pointer-events: auto;
+}
+
+.gray-screen {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: var(--foreground);
+
+  /* Плавное появление фона */
+  opacity: 0;
+  transition: opacity 300ms ease;
+}
+.cart-container.open .gray-screen {
+  opacity: 0.4;
+}
+
+.cart-panel {
+  position: absolute;
+  padding: 8px 16px;
+  background-color: var(--background);
+  right: 0;
+  width: 30vw;
+  height: 100vh;
+
+  transform: translateX(100%);
+  transition: transform 300ms ease;
+}
+
+.cart-container.open .cart-panel {
+  transform: translateX(0);
+}
+
+.divider {
+  width: 100%;
+  height: var(--border-width);
+  background-color: var(--border);
+  margin: 8px 0 16px;
+}
