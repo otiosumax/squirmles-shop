@@ -14,16 +14,6 @@
   grid-template-columns: 1fr 1fr 1fr;
   align-items: center;
 
-  .align-left {
-    justify-self: start;
-  }
-  .align-center {
-    justify-self: center;
-  }
-  .align-right {
-    justify-self: end;
-  }
-
   .menu {
     display: flex;
     justify-items: center;
@@ -61,4 +51,14 @@
 
 .card-padding {
   padding: 18px 24px;
+}
+
+.align-left {
+  justify-self: start;
+}
+.align-center {
+  justify-self: center;
+}
+.align-right {
+  justify-self: end;
 }

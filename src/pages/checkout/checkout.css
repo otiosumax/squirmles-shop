@@ -12,7 +12,7 @@
   .progress-stripe {
     padding: 8px var(--indent);
 
-    background-color: color-mix(in srgb, var(--foreground) 15%, transparent);
+    background-color: var(--muted);
     border-bottom: var(--border-width) solid var(--border);
   }
 

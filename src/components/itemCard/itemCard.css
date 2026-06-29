@@ -5,11 +5,6 @@
   overflow: hidden;
   box-sizing: border-box;
 
-  /* border: var(--border-width) solid var(--border);
-  border-radius: var(--radius);
-  box-shadow: calc(2 * var(--border-width)) calc(2 * var(--border-width))
-    var(--border); */
-
   transition: 200ms;
 }
 
@@ -44,7 +39,6 @@
 
 .item-info {
   bottom: 0;
-  /* padding: 16px; */
   display: flex;
   flex-direction: column;
   gap: 8px;
@@ -77,14 +71,13 @@
 
 .in-cart-quantity {
   display: flex;
-  align-items: stretch; /* Растянет все элементы (и кнопки, и span) на одинаковую высоту */
-
+  align-items: stretch;
   span {
     display: inline-block;
-    align-items: center; /* Отцентрует цифру внутри span по вертикали */
+    align-items: center;
     justify-content: center;
     padding: 0 8px;
-    box-sizing: border-box; /* Чтобы границы входили в размер элемента */
+    box-sizing: border-box;
     border: var(--border-width) solid var(--border);
     border-style: solid none;
     height: full;

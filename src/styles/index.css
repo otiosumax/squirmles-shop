@@ -1,7 +1,7 @@
 :root {
   --background: #fffde8;
   --foreground: #1a1033;
-  --muted: #ececf0;
+  --muted: #f5f0d8;
   --muted-foreground: #717182;
   --primary: #ff3ea5;
   --secondary: #b9f5a0;
@@ -60,6 +60,10 @@ h2 {
 h3 {
   margin: 0;
   font-size: 1.125rem;
+}
+h4 {
+  margin: 0;
+  font-size: 1rem;
 }
 
 a {

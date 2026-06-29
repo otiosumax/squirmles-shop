@@ -1,5 +1,41 @@
 .order-summary {
   background-color: var(--card);
-  background-clip: padding-box;
+  overflow: hidden;
+  box-sizing: border-box;
+
+  .summary-header {
+    background-color: var(--muted);
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    align-items: center;
+  }
 }
 
+.summary-item-card {
+  display: grid;
+  grid-template-columns: auto 1fr auto;
+  gap: 8px;
+  align-items: center;
+
+  .summary-item-name {
+    color: var(--foreground);
+  }
+
+  img {
+    border: var(--border-width) solid var(--border);
+    border-radius: var(--radius);
+    max-width: 48px;
+  }
+}
+
+.pricing {
+  .pricing-line {
+    display: grid;
+    margin: 0 0 8px 0;
+    grid-template-columns: 1fr auto;
+  }
+
+  .pricing-line:last-child {
+    margin: 8px 0 0;
+  }
+}

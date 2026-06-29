@@ -6,6 +6,8 @@ html {
 }
 
 p,
-span {
+span,
+h4,
+a {
   font-family: sans-serif;
 }

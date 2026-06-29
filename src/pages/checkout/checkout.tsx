@@ -38,7 +38,7 @@ export default function Checkout() {
         </div>
         <div className="order">
           <OrderSummary />
-          <button className="button bordered">Подтвердить заказ</button>
+          <button className="button bordered">🤑 Подтвердить заказ</button>
         </div>
       </form>
     </div>

@@ -1,11 +1,12 @@
-import { forwardRef } from "react";
-import ItemCard from "../itemCard/itemCard";
-
 import "./collection.css";
+
+import ItemCard from "../itemCard/itemCard";
+import { forwardRef } from "react";
 import { useProducts } from "../../contexts/productsContext";
 
 const Collection = forwardRef<HTMLDivElement>(function Hero(props, ref) {
   const products = useProducts();
+  console.log(props);
 
   return (
     <div ref={ref} className="collection">
