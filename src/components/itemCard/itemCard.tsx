@@ -1,6 +1,6 @@
 import "./itemCard.css";
 
-import type { Product } from "../../models/cardData";
+import type { Product } from "../../models/product";
 import { useCart } from "../../contexts/cartContext";
 
 export default function ItemCard({ item }: { item: Product }) {
@@ -54,7 +54,7 @@ export default function ItemCard({ item }: { item: Product }) {
           <img src={imageUrl} alt={item.name} />
         </div>
       </div>
-      <div className="item-info">
+      <div className="item-info card-padding">
         <h2 className="item-name">{item.name}</h2>
         <p className="item-description">{item.tagline}</p>
         <span className="item-stars">

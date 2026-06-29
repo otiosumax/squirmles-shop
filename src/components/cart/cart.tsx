@@ -3,7 +3,7 @@ import "./cart.css";
 import { useEffect, useState } from "react";
 
 import { Link } from "react-router";
-import type { Product } from "../../models/cardData";
+import type { Product } from "../../models/product";
 import { useCart } from "../../contexts/cartContext";
 import { useProducts } from "../../contexts/productsContext";
 

@@ -1,10 +1,59 @@
-.progress-stripe {
-  margin: 62px calc(-1 * var(--indent));
-  padding: 8px var(--indent);
-  position: static;
-  background-color: color-mix(in srgb, var(--foreground) 15%, transparent);
-}
+.checkout {
+  .safe-payment {
+    display: auto;
+  }
 
-form {
-  background-color: var(--card);
+  @media (max-width: 1024px) {
+    .safe-payment {
+      display: none;
+    }
+  }
+
+  .progress-stripe {
+    padding: 8px var(--indent);
+
+    background-color: color-mix(in srgb, var(--foreground) 15%, transparent);
+    border-bottom: var(--border-width) solid var(--border);
+  }
+
+  .form-layout {
+    display: grid;
+    padding-top: 40px;
+    grid-template-columns: 1.5fr 1fr;
+    gap: 36px 40px;
+  }
+
+  @media (max-width: 726px) {
+    .form-layout {
+      grid-template-columns: 1fr;
+    }
+  }
+
+  .form-inputs {
+    display: flex;
+    flex-direction: column;
+    gap: 32px;
+
+    .form-block {
+      background-color: var(--card);
+    }
+  }
+
+  .order {
+    height: fit-content;
+    position: sticky;
+    top: 100px;
+
+    button {
+      padding: 16px 0;
+      width: 100%;
+    }
+  }
+
+  @media (max-width: 726px) {
+    .order {
+      position: relative;
+      top: 0;
+    }
+  }
 }

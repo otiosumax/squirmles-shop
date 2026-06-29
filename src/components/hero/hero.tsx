@@ -1,5 +1,6 @@
-import { forwardRef } from "react";
 import "./hero.css";
+
+import { forwardRef } from "react";
 
 const Hero = forwardRef<HTMLDivElement, { onButtonClick: () => void }>(
   function Hero(props, ref) {
@@ -26,7 +27,7 @@ const Hero = forwardRef<HTMLDivElement, { onButtonClick: () => void }>(
           </h2>
           <div className="shop-and-shipping">
             <button
-              className="shop-button"
+              className="button"
               onClick={() => {
                 onButtonClick();
               }}

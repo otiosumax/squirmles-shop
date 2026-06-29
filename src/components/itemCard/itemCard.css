@@ -44,7 +44,7 @@
 
 .item-info {
   bottom: 0;
-  padding: 16px;
+  /* padding: 16px; */
   display: flex;
   flex-direction: column;
   gap: 8px;

@@ -1,0 +1,5 @@
+.order-summary {
+  background-color: var(--card);
+  background-clip: padding-box;
+}
+

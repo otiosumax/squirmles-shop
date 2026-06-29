@@ -1,5 +1,6 @@
 import { createContext, useContext, useEffect, useState } from "react";
-import type { Product } from "../models/cardData";
+
+import type { Product } from "../models/product";
 
 type ProductsContextType = {
   productsList: Product[];

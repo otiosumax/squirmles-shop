@@ -48,10 +48,7 @@
   transform: translateX(0);
 }
 
-.divider {
-  width: 100%;
-  height: var(--border-width);
-  background-color: var(--border);
+.cart-container .divider {
   margin: 8px 0 16px;
 }
 

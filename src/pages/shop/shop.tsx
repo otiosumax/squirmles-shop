@@ -36,7 +36,7 @@ export default function Shop() {
   return (
     <CartProvider>
       <div className="shop">
-        <div className="header">
+        <div className="layout header">
           <div className="logo-container align-left">
             <div className="logo">logo</div>
             <h1>Здесь будут черви</h1>
@@ -55,14 +55,15 @@ export default function Shop() {
             Корзина
           </button>
         </div>
+        <div className="layout">
+          <Hero
+            ref={getRef("hero")}
+            onButtonClick={() => scrollToSection("shop")}
+          />
+          <Collection ref={getRef("shop")} />
 
-        <Hero
-          ref={getRef("hero")}
-          onButtonClick={() => scrollToSection("shop")}
-        />
-        <Collection ref={getRef("shop")} />
-
-        <Cart isOpen={isCartOpen} onClose={() => setIsCartOpen(false)} />
+          <Cart isOpen={isCartOpen} onClose={() => setIsCartOpen(false)} />
+        </div>
       </div>
     </CartProvider>
   );

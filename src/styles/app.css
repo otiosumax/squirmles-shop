@@ -1,10 +1,10 @@
 .header {
-  position: fixed;
+  position: sticky;
   z-index: 5;
   top: 0;
   left: 0;
   width: 100%;
-  padding: 16px var(--indent);
+  padding: 16px;
   border-bottom: var(--border-width) solid var(--border);
   background-color: var(--background);
 
@@ -48,3 +48,17 @@
   }
 }
 
+.layout {
+  padding-left: var(--indent);
+  padding-right: var(--indent);
+}
+
+.divider {
+  width: 100%;
+  height: var(--border-width);
+  background-color: var(--border);
+}
+
+.card-padding {
+  padding: 18px 24px;
+}
