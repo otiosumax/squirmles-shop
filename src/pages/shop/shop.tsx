@@ -38,7 +38,7 @@ export default function Shop() {
       <div className="shop">
         <div className="layout header">
           <div className="logo-container align-left">
-            <div className="logo">logo</div>
+            <div className="logo"><img src="/squirmle.png" alt="Logo" style={{aspectRatio: "1/1", height: "48px"}} /></div>
             <h1>Здесь будут черви</h1>
           </div>
           <div className="menu align-center">
