@@ -9,11 +9,11 @@
   --card: #fff;
   --card-foreground: #1a1a1a;
 
-  --font-size: 16px;
-  --radius: 1rem;
-  --border-width: 2px;
-  --button-radius: 1000px;
-  --indent: clamp(32px, 8vw, 256px);
+  --font-size: clamp(14px, 2vw, 24px);
+  --radius: clamp(0.5rem, 1.5vw, 2rem);
+  --border-width: clamp(1px, 0.15vw, 3px);
+  --button-radius: clamp(20px, 5vw, 1000px);
+  --indent: clamp(16px, 6vw, 256px);
 
   padding: 0;
   margin: 0;
@@ -31,6 +31,7 @@ html {
 body {
   background-color: var(--background);
   color: var(--foreground);
+  font-size: var(--font-size);
   margin: 0;
   padding: 0;
 }

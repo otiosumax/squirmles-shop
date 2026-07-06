@@ -27,7 +27,6 @@ export default function OrderSummary() {
   const cart = useCart();
   const products = useProducts();
 
-  // 🔥 Проверка на загрузку
   if (!products.productsList || products.productsList.length === 0) {
     return (
       <div className="bordered order-summary">
@@ -43,7 +42,6 @@ export default function OrderSummary() {
   const getProductById = (id: string) =>
     products.productsList.find((product) => String(id) === String(product.id));
 
-  // 🔥 Фильтруем корзину от невалидных товаров
   const validCartItems = cart.inCart.filter((item) => getProductById(item.id));
 
   const total = validCartItems.reduce((total, item) => {
@@ -78,6 +76,11 @@ export default function OrderSummary() {
 
       <div className="divider" />
       <div className="pricing card-padding">
+        <div className="promo-code">
+          <input type="text" id="promo" name="promo" placeholder="Промокод" />
+          <button className="button">Применить</button>
+        </div>
+
         <p className="pricing-line">
           <span>Стоимость:</span>
           <span>${total.toFixed(2)}</span>

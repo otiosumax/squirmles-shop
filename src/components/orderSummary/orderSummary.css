@@ -28,6 +28,16 @@
   }
 }
 
+.promo-code {
+  display: grid;
+  grid-template-columns: 1fr auto;
+  gap: 8px;
+
+  button {
+    padding: 8px 16px;
+  }
+}
+
 .pricing {
   .pricing-line {
     display: grid;

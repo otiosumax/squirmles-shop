@@ -9,11 +9,7 @@ const Hero = forwardRef<HTMLDivElement, { onButtonClick: () => void }>(
     return (
       <div ref={ref} className="hero">
         <h1>
-          Самые
-          <br />
-          крутые
-          <br />
-          черви!
+          Самые{/* <br /> */} крутые{/* <br /> */} черви!
         </h1>
         <img
           className="bordered"

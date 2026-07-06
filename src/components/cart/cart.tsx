@@ -30,7 +30,7 @@ function CartItemCard({ item }: { item: Product }) {
             <img src={item.imageUrl}></img>
             <div>
               <h2>{item.name}</h2>
-              <p className="price">${item.price * inCartItemQuantity}</p>
+              <p className="price">${(item.price * inCartItemQuantity).toFixed(2)}</p>
             </div>
           </div>
           <div className="in-cart-quantity">
