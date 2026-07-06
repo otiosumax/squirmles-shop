@@ -5,7 +5,7 @@
 .selling-items {
   display: grid;
   grid-template-columns: 1fr 1fr 1fr;
-  gap: 24px;
+  gap: 1rem;
 }
 
 @media (max-width: 1024px) {

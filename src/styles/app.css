@@ -38,6 +38,12 @@
   }
 }
 
+@media (max-width: 726px) {
+  .header {
+    grid-template-columns: 1fr 1fr;
+  }
+}
+
 .layout {
   padding-left: var(--indent);
   padding-right: var(--indent);
