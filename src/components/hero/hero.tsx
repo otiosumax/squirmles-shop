@@ -7,7 +7,7 @@ const Hero = forwardRef<HTMLDivElement, { onButtonClick: () => void }>(
     const onButtonClick = props.onButtonClick;
 
     return (
-      <div ref={ref} className="hero">
+      <div ref={ref} className="hero layout">
         <h1>
           Самые{/* <br /> */} крутые{/* <br /> */} черви!
         </h1>

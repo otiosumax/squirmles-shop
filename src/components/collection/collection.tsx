@@ -9,7 +9,7 @@ const Collection = forwardRef<HTMLDivElement>(function Hero(props, ref) {
   console.log(props);
 
   return (
-    <div ref={ref} className="collection">
+    <div ref={ref} className="collection layout">
       <h1>Коллекция</h1>
       <p>Свой червь под каждый вайб!</p>
       <br />

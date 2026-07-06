@@ -3,10 +3,13 @@ import "./shop.css";
 
 import { useRef, useState } from "react";
 
+import About from "../../components/about/about";
 import Cart from "../../components/cart/cart";
 import { CartProvider } from "../../contexts/cartContext";
 import Collection from "../../components/collection/collection";
+import Footer from "../../components/footer/footer";
 import Hero from "../../components/hero/hero";
+import QnA from "../../components/qna/qna";
 
 export default function Shop() {
   const [isCartOpen, setIsCartOpen] = useState(false);
@@ -38,13 +41,19 @@ export default function Shop() {
       <div className="shop">
         <div className="layout header">
           <div className="logo-container align-left">
-            <div className="logo"><img src="/squirmle.png" alt="Logo" style={{aspectRatio: "1/1", height: "48px"}} /></div>
+            <div className="logo">
+              <img
+                src="/squirmle.png"
+                alt="Logo"
+                style={{ aspectRatio: "1/1", height: "48px" }}
+              />
+            </div>
             <h1>Здесь будут черви</h1>
           </div>
           <div className="menu align-center">
             <p onClick={() => scrollToSection("hero")}>Вверх</p>
             <p onClick={() => scrollToSection("shop")}>Магазин</p>
-            {/* <p onClick={() => scrollToSection("qna")}>ЧаВо</p> */}
+            <p onClick={() => scrollToSection("qna")}>ЧаВо</p>
           </div>
           <button
             className="button align-right"
@@ -55,12 +64,20 @@ export default function Shop() {
             Корзина
           </button>
         </div>
-        <div className="layout">
+        <div>
           <Hero
             ref={getRef("hero")}
             onButtonClick={() => scrollToSection("shop")}
           />
+
           <Collection ref={getRef("shop")} />
+
+          <About ref={getRef("about")} />
+
+          <QnA ref={getRef("qna")} />
+
+          <div className="divider" />
+          <Footer />
 
           <Cart isOpen={isCartOpen} onClose={() => setIsCartOpen(false)} />
         </div>
