@@ -5,7 +5,16 @@
     <link rel="icon" type="image/png" href="/squirmles-shop/squirmle.png" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>squirmles-shop</title>
-    <script type="module" crossorigin src="/squirmles-shop/assets/index-Btn6KUMA.js"></script>
+    <script>
+      (function () {
+        var redirect = sessionStorage.getItem("redirect");
+        if (redirect) {
+          sessionStorage.removeItem("redirect");
+          window.history.replaceState(null, "", redirect);
+        }
+      })();
+    </script>
+    <script type="module" crossorigin src="/squirmles-shop/assets/index-CKzo277X.js"></script>
     <link rel="stylesheet" crossorigin href="/squirmles-shop/assets/index-Blu1X0S5.css">
   </head>
   <body>
