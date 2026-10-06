@@ -14,7 +14,7 @@ export function ProductsProvider({ children }: { children: React.ReactNode }) {
   const [productsList, setProducts] = useState<Product[]>([]);
 
   useEffect(() => {
-    fetch("/sample.json")
+    fetch(`${import.meta.env.BASE_URL}sample.json`)
       .then((response) => response.json())
       .then((data) => setProducts(data || []))
       .catch(() =>

@@ -43,7 +43,7 @@ export default function Shop() {
           <div className="logo-container align-left">
             <div className="logo">
               <img
-                src="/squirmle.png"
+                src={`${import.meta.env.BASE_URL}squirmle.png`}
                 alt="Logo"
                 style={{ aspectRatio: "1/1", height: "48px" }}
               />
