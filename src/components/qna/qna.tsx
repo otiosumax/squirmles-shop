@@ -2,7 +2,7 @@ import "./qna.css";
 
 import { forwardRef } from "react";
 
-const QnA = forwardRef<HTMLDivElement, {}>(function QnA(props, ref) {
+const QnA = forwardRef<HTMLDivElement, {}>(function QnA(_props, ref) {
   return (
     <div className="qna layout" ref={ref}>
       <h1>ЧаВо</h1>
