@@ -9,6 +9,7 @@ type CartContextType = {
   inCart: CartItem[];
   addToCart: (item: CartItem) => void;
   removeFromCart: (id: string) => void;
+  clearCart: () => void;
 };
 
 // TODO: изучить подробнее
@@ -45,11 +46,18 @@ export function CartProvider({ children }: { children: React.ReactNode }) {
         .filter((cartItem) => cartItem.quantity > 0),
     );
   };
+
+  const clearCart = () => {
+    setInCart([]);
+  };
+
   useEffect(() => {
     localStorage.setItem("cart", JSON.stringify(inCart));
   }, [inCart]);
   return (
-    <CartContext.Provider value={{ inCart, addToCart, removeFromCart }}>
+    <CartContext.Provider
+      value={{ inCart, addToCart, removeFromCart, clearCart }}
+    >
       {children}
     </CartContext.Provider>
   );

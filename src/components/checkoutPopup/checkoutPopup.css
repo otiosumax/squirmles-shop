@@ -1,0 +1,40 @@
+.checkout-popup {
+  position: fixed;
+  inset: 0;
+  z-index: 20;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 24px;
+
+  .popup-overlay {
+    position: absolute;
+    inset: 0;
+    background-color: var(--foreground);
+    opacity: 0.4;
+  }
+
+  .popup-panel {
+    position: relative;
+    width: 100%;
+    max-width: 420px;
+    padding: 32px;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 16px;
+    text-align: center;
+
+    background-color: var(--card);
+
+    h2 {
+      color: var(--foreground);
+    }
+
+    p {
+      color: var(--muted-foreground);
+    }
+  }
+}
