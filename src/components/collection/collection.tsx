@@ -6,8 +6,6 @@ import { useProducts } from "../../contexts/productsContext";
 
 const Collection = forwardRef<HTMLDivElement>(function Hero(props, ref) {
   const products = useProducts();
-  console.log(props);
-
   return (
     <div ref={ref} className="collection layout">
       <h1>Коллекция</h1>
